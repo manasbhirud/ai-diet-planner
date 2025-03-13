@@ -1,0 +1,145 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    background-color: black;
+    background-position: center;
+    background-size:cover ;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 10; /* Ensure it stays on top */
+}
+
+/* Style for "Nutri" */
+.nutri {
+    color: white;
+}
+
+/* Style for "Track" */
+.track {
+    color: green;
+    text-shadow: 0 0 10px #077b32;
+}
+
+.container {
+    /* max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1; */
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 75%;
+    height: 550px;
+    margin-top: 20px;
+    /* background: url(dark.jpg) no-repeat; */
+    background-position: center;
+    background-size:cover ;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: white;
+}
+span{
+    color: white;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+#line{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#a8cba0;
+    color:black;
+    font-size: large;
+    box-shadow: 0 0 50px green;
+    transition: .8s ease;
+}
+
+/* Progress bar */
+.progress-container {
+    height: 10px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+/* Step styles */
+.step {
+    display: none;
+}
+
+/* Display first step by default */
+#step1 {
+    display: block;
+}
+
+/* Icon styles */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+@media (max-width: 1080px) {
+    .logo-container {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        z-index: 10; /* Ensure it stays on top */
+    }
+}

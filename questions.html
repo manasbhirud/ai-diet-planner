@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Planner - Questions</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="questions.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="logo-container" data-aos="zoom-out" data-aos-duration ="3000">
+        <span class="nutri">Nutri</span><span class="track"> Track</span>
+    </div>
+    <div class="container">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <!-- Form Steps -->
+        <div id="step1" class="step">
+            <h2>Step 1: Height and Weight</h2>
+            <label for="height">Height (cm):</label>
+            <input type="range" id="height" name="height" min="100" max="250" value="170" oninput="updateHeightValue()">
+            <span id="heightValue">170 cm</span>
+            <hr id="line">
+            <label for="weight">Weight (kg):</label>
+            <input type="range" id="weight" name="weight" min="30" max="200" value="70" oninput="updateWeightValue()">
+            <span id="weightValue">70 kg</span>
+
+            <button onclick="nextStep('step1', 'step2')">Next</button>
+        </div>
+
+        <div id="step2" class="step" style="display: none;">
+            <h2>Step 2: Age and Activity Level</h2>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" value="25" required>
+
+            <label for="Gender">Gender:</label>
+            <select id="Gender" name="Gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="activity">Goal:</label>
+            <select id="activity" name="activity">
+                <option value="maintain">Maintain</option>
+                <option value="weight-loss">Weight Loss</option>
+                <option value="weight-gain">Weight Gain</option>
+            </select>
+
+            <button onclick="nextStep('step2', 'step3')">Next</button>
+        </div>
+
+        <div id="step3" class="step" style="display: none;">
+            <h2>Step 3: Physical Activity</h2>
+            <label for="diet">Physical Activity:</label>
+            <select id="diet" name="diet">
+                <option>Sedentary</option>
+                <option selected>Lightly-Active</option>
+                <option>Moderately-Active</option>
+                <option>Active</option>
+                <option>Very-Active</option>
+                <option>Super-Active</option>
+            </select>
+
+            <button onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="questions.js"></script>
+</body>
+</html>
+

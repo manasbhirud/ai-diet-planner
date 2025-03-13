@@ -1,1 +1,1 @@
-# ai-diet-planner
+# Diet-Planner
